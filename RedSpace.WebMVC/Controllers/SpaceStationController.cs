@@ -12,10 +12,15 @@ namespace RedSpace.WebMVC.Controllers
     public class SpaceStationController : Controller
     {
         // GET: SpaceStation
-        public ActionResult Index()
+        //Filter by capacity
+        public ActionResult Index(string searchString)
         {
             var service = new SpaceStationService();
             var model = service.GetAllSpaceStations();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                model = model.Where(s => s.Name.Contains(searchString)).ToList();
+            }
             return View(model);
         }
         //Get
