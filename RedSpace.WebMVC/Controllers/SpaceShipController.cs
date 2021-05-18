@@ -60,7 +60,8 @@ namespace RedSpace.WebMVC.Controllers
                 {
                     Id = detail.Id,
                     ShipName = detail.ShipName,
-                    CrewCapacity = detail.CrewCapacity
+                    CrewCapacity = detail.CrewCapacity,
+                    LaunchSiteId = detail.LaunchSiteId
                 };
             return View(model);
         }

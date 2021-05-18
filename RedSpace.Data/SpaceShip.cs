@@ -18,5 +18,7 @@ namespace RedSpace.Data
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
         public DateTimeOffset? ModifiedUtc { get; set; }
+        [Required]
+        public int LaunchSiteId { get; set; }
     }
 }

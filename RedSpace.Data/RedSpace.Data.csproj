@@ -60,6 +60,10 @@
     <Compile Include="Migrations\202105161555341_InitialMigration.Designer.cs">
       <DependentUpon>202105161555341_InitialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105171808565_MasterTable.cs" />
+    <Compile Include="Migrations\202105171808565_MasterTable.Designer.cs">
+      <DependentUpon>202105171808565_MasterTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpaceShip.cs" />
@@ -72,6 +76,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105161555341_InitialMigration.resx">
       <DependentUpon>202105161555341_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105171808565_MasterTable.resx">
+      <DependentUpon>202105171808565_MasterTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
