@@ -15,5 +15,7 @@ namespace RedSpace.Models.SpaceShipModels
         [Required]
         [Display(Name = "Crew Capacity")]
         public int CrewCapacity { get; set; }
+        [Required]
+        public int LaunchSiteId { get; set; }
     }
 }

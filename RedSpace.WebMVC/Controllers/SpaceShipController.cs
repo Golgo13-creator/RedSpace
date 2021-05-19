@@ -12,10 +12,14 @@ namespace RedSpace.WebMVC.Controllers
     public class SpaceShipController : Controller
     {
         // GET: SpaceShip
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
             var service = new SpaceShipService();
             var model = service.GetAllSpaceShips();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                model = model.Where(s => s.ShipName.Contains(searchString)).ToList();
+            }
             return View(model);
         }
         //Get
@@ -53,7 +57,8 @@ namespace RedSpace.WebMVC.Controllers
                 {
                     Id = detail.Id,
                     ShipName = detail.ShipName,
-                    CrewCapacity = detail.CrewCapacity
+                    CrewCapacity = detail.CrewCapacity,
+                    LaunchSiteId = detail.LaunchSiteId
                 };
             return View(model);
         }
