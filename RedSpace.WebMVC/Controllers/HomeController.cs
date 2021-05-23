@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RedSpace.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,15 @@ namespace RedSpace.WebMVC.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult ShipOrigin(int? LaunchSiteId)
+        {
+            var service = new SpaceShipService();
+            var ships = service.GetAllSpaceShips();
+            var shipOrigin = (from s in ships
+                              where (LaunchSiteId == null || s.LaunchSiteId == LaunchSiteId)
+                              select s).ToList();
+            return View(shipOrigin);
+        }
         public ActionResult Index()
         {
             return View();
