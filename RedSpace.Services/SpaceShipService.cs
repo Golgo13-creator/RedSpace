@@ -18,7 +18,8 @@ namespace RedSpace.Services
             {
                 ShipName = model.ShipName,
                 CrewCapacity = model.CrewCapacity,
-                CreatedUtc = DateTimeOffset.Now
+                CreatedUtc = DateTimeOffset.Now,
+                LaunchSiteId = model.LaunchSiteId
             };
             _context.SpaceShips.Add(entity);
             return _context.SaveChanges() == 1;
@@ -33,7 +34,8 @@ namespace RedSpace.Services
                 ShipName = s.ShipName,
                 CrewCapacity = s.CrewCapacity,
                 CreatedUtc = s.CreatedUtc,
-                ModifiedUtc = s.ModifiedUtc
+                ModifiedUtc = s.ModifiedUtc,
+                LaunchSiteId = s.LaunchSiteId
             }).ToList();
             return spaceshipList;
         }
@@ -53,7 +55,8 @@ namespace RedSpace.Services
                          ShipName = entity.ShipName,
                          CrewCapacity = entity.CrewCapacity,
                          CreatedUtc = entity.CreatedUtc,
-                         ModifiedUtc = entity.ModifiedUtc
+                         ModifiedUtc = entity.ModifiedUtc,
+                         LaunchSiteId = entity.LaunchSiteId
                      };
             }
         }
@@ -70,6 +73,7 @@ namespace RedSpace.Services
                 oldData.ShipName = model.ShipName;
                 oldData.CrewCapacity = model.CrewCapacity;
                 oldData.ModifiedUtc = DateTimeOffset.Now;
+                oldData.LaunchSiteId = model.LaunchSiteId;
                 return ctx.SaveChanges() == 1;
             }
         }

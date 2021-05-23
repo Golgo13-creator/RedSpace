@@ -13,7 +13,6 @@ namespace RedSpace.WebMVC.Controllers
     [Authorize]
     public class LaunchSiteController : Controller
     {
-        private readonly ApplicationDbContext _context = new ApplicationDbContext();
         // GET: LaunchSite
         //full list or filter by location
         public ActionResult Index(string searchString)
@@ -48,8 +47,8 @@ namespace RedSpace.WebMVC.Controllers
         //Get
         public ActionResult Details(int id)
         {
-            var svc = new SpaceShipService();
-            var model = svc.GetSpaceShipById(id);
+            var svc = new LaunchSiteService();
+            var model = svc.GetLaunchSiteById(id);
             return View(model);
         }
         //Get

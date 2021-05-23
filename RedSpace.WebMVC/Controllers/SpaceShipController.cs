@@ -14,7 +14,6 @@ namespace RedSpace.WebMVC.Controllers
     {
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
         // GET: SpaceShip
-        // Filter by max capacity
         public ActionResult Index(string searchString)
         {
             var service = new SpaceShipService();
@@ -60,7 +59,8 @@ namespace RedSpace.WebMVC.Controllers
                 {
                     Id = detail.Id,
                     ShipName = detail.ShipName,
-                    CrewCapacity = detail.CrewCapacity
+                    CrewCapacity = detail.CrewCapacity,
+                    LaunchSiteId = detail.LaunchSiteId
                 };
             return View(model);
         }

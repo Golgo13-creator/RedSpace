@@ -5,17 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RedSpace.Models.SpaceShipModels
+namespace RedSpace.Models
 {
-    public class SpaceShipCreate
+    public class ShipOrigin
     {
         [Required]
-        [Display(Name = "Ship Name")]
+        public string Name { get; set; }
+        [Required]
+        public string Location { get; set; }
+        [Required]
         public string ShipName { get; set; }
         [Required]
-        [Display(Name = "Crew Capacity")]
         public int CrewCapacity { get; set; }
-        [Required]
-        public int LaunchSiteId { get; set; }
     }
 }

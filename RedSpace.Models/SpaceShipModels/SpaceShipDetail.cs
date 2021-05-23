@@ -22,5 +22,7 @@ namespace RedSpace.Models.SpaceShipModels
         public DateTimeOffset CreatedUtc { get; set; }
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        [Required]
+        public int LaunchSiteId { get; set; }
     }
 }

@@ -11,5 +11,6 @@ namespace RedSpace.Models.SpaceShipModels
         public int Id { get; set; }
         public string ShipName { get; set; }
         public int CrewCapacity { get; set; }
+        public int LaunchSiteId { get; set; }
     }
 }
