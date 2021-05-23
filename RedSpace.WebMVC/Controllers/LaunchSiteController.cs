@@ -1,7 +1,9 @@
-﻿using RedSpace.Models.LaunchSiteModels;
+﻿using RedSpace.Data;
+using RedSpace.Models.LaunchSiteModels;
 using RedSpace.Services;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,11 +14,17 @@ namespace RedSpace.WebMVC.Controllers
     public class LaunchSiteController : Controller
     {
         // GET: LaunchSite
-        public ActionResult Index()
+        //full list or filter by location
+        public ActionResult Index(string searchString)
         {
             var service = new LaunchSiteService();
             var model = service.GetAllLaunchSites();
+            if(!String.IsNullOrEmpty(searchString))
+            {
+                model = model.Where(s => s.Location.Contains(searchString)).ToList();
+            }
             return View(model);
+           
         }
         //Get
         public ActionResult Create()
@@ -39,8 +47,8 @@ namespace RedSpace.WebMVC.Controllers
         //Get
         public ActionResult Details(int id)
         {
-            var svc = new SpaceShipService();
-            var model = svc.GetSpaceShipById(id);
+            var svc = new LaunchSiteService();
+            var model = svc.GetLaunchSiteById(id);
             return View(model);
         }
         //Get

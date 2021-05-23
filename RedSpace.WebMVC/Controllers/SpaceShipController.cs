@@ -1,4 +1,5 @@
-﻿using RedSpace.Models.SpaceShipModels;
+﻿using RedSpace.Data;
+using RedSpace.Models.SpaceShipModels;
 using RedSpace.Services;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace RedSpace.WebMVC.Controllers
     [Authorize]
     public class SpaceShipController : Controller
     {
+        private readonly ApplicationDbContext _context = new ApplicationDbContext();
         // GET: SpaceShip
         public ActionResult Index(string searchString)
         {
