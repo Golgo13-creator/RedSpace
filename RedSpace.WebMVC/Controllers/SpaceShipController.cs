@@ -14,7 +14,6 @@ namespace RedSpace.WebMVC.Controllers
     {
         private readonly ApplicationDbContext _context = new ApplicationDbContext();
         // GET: SpaceShip
-        // Filter by max capacity
         public ActionResult Index(string searchString)
         {
             var service = new SpaceShipService();

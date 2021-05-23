@@ -58,6 +58,7 @@
     <Compile Include="LaunchSiteModels\LaunchSiteDetail.cs" />
     <Compile Include="LaunchSiteModels\LaunchSiteEdit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShipOrigin.cs" />
     <Compile Include="SpaceShipModels\SpaceShipCreate.cs" />
     <Compile Include="SpaceShipModels\SpaceShipDetail.cs" />
     <Compile Include="SpaceShipModels\SpaceShipEdit.cs" />
