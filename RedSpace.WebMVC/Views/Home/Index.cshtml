@@ -7,21 +7,30 @@
     <p class="lead">Build SpaceShips, SpaceStations and the LaunchSites they deploy from.</p>
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>SpaceShips</h2>
-        <p>
-           Create, Edit, get Details on or Remove a Space Ship. 
-        </p>
-        <p><a class="btn btn-default" href="https://localhost:44385/SpaceShip">Build &raquo;</a></p>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="~/Asset/falcon9.jpg" alt="SpaceShip" />
+            <h2>SpaceShips</h2>
+            <p>
+                Create, Edit, get Details on or Remove a Space Ship.
+            </p>
+            <p><a class="btn btn-default" @Html.ActionLink("Build", "Create", "SpaceShip")</a></p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>SpaceStations</h2>
-        <p>Create, Edit, get Details on or Remove a Space Station.</p>
-        <p><a class="btn btn-default" href="https://localhost:44385/SpaceStation">Build &raquo;</a></p>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="~/Asset/skylab.jpg" alt="SpaceStation" />
+            <h2>SpaceStations</h2>
+            <p>Create, Edit, get Details on or Remove a Space Station.</p>
+            <p><a class="btn btn-default" @Html.ActionLink("Build", "Create", "SpaceStation")</a></p>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>LaunchSites</h2>
-        <p>Create, Edit, get Details on or Remove a Launch Site.</p>
-        <p><a class="btn btn-default" href="https://localhost:44385/LaunchSite">Build &raquo;</a></p>
+    <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <img src="~/Asset/launchSite.jpg" alt="LaunchSite" />
+            <h2>LaunchSites</h2>
+            <p>Create, Edit, get Details on or Remove a Launch Site.</p>
+            <p><a class="btn btn-default" @Html.ActionLink("Build", "Create", "LaunchSite")</a></p>
+        </div>
     </div>
-</div>
+    </div>
