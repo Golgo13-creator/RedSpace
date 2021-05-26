@@ -184,6 +184,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Asset\falcon9.jpg" />
+    <Content Include="Asset\launchSite.jpg" />
+    <Content Include="Asset\launchSitethumb.jpg" />
+    <Content Include="Asset\skylab.jpg" />
+    <Content Include="Asset\skylabthumb.jpg" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
