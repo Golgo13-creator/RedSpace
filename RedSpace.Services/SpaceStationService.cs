@@ -94,8 +94,6 @@ namespace RedSpace.Services
                 return false;
             }
         }
-        //get by max occupants (return a list)
-        //test
     }
 }
 

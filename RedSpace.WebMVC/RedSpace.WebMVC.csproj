@@ -253,7 +253,6 @@
     <Content Include="Views\SpaceStation\Details.cshtml" />
     <Content Include="Views\SpaceStation\Edit.cshtml" />
     <Content Include="Views\SpaceStation\Index.cshtml" />
-    <Content Include="Views\SpaceStation\Delete.cshtml" />
     <Content Include="Views\LaunchSite\Create.cshtml" />
     <Content Include="Views\LaunchSite\Details.cshtml" />
     <Content Include="Views\LaunchSite\Edit.cshtml" />
@@ -262,6 +261,7 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Views\LaunchSite\Index.cshtml" />
     <Content Include="Views\ShipOrigin\Index.cshtml" />
+    <Content Include="Views\SpaceStation\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

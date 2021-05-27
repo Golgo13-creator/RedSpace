@@ -1,4 +1,4 @@
-﻿@model RedSpace.Models.SpaceShipModels.SpaceShipDetail
+﻿@model RedSpace.Models.SpaceStationModels.SpaceStationDetail
 
 @{
     ViewBag.Title = "Delete";
@@ -8,23 +8,23 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>SpaceShipDetail</h4>
+    <h4>SpaceStationDetail</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.ShipName)
+            @Html.DisplayNameFor(model => model.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.ShipName)
+            @Html.DisplayFor(model => model.Name)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CrewCapacity)
+            @Html.DisplayNameFor(model => model.MaximumOccupancy)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CrewCapacity)
+            @Html.DisplayFor(model => model.MaximumOccupancy)
         </dd>
 
         <dt>
